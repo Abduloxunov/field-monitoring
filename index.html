@@ -2112,9 +2112,6 @@ body.fm-on .shell{min-height:540px}
 .fm-tmark .fm-trap-i{color:#2c3733}
 .fm-tmark:hover .fm-trap-i,.fm-tmark.fm-on .fm-trap-i{color:var(--water)}
 .fm-tmark:focus-visible circle{stroke:var(--water);stroke-width:2}
-.fm-thumb{fill:none;stroke:#fff;stroke-width:2.5}
-.fm-thumb-b{fill:var(--panel);stroke:#fff;stroke-width:2}
-.fm-thumb-i{color:var(--ink)}
 .fm-pulse{fill:none;stroke:var(--closed);stroke-width:2;opacity:0;animation:fm-pulse 2.6s ease-out infinite}
 @keyframes fm-pulse{0%{r:18px;opacity:.7}100%{r:46px;opacity:0}}
 
@@ -2556,21 +2553,21 @@ const DOSE_L_HA=0.2, f1=v=>(Math.round(v*10)/10).toFixed(1), fmtL=v=>String(Math
    Moths stay on the sticky sheet, so the photo's count is the sum of the weeks since the sheet was
    replaced. photo = a real photo whose boxes equal that sum. */
 const TRAPS=[
- {card:25,x:532.9,y:153.5,nx:483.0,ny:144.0,lat:39.699551,lon:68.109999,thumb:[373,125],photo:'1585',bat:82,lure:30,w:[1,3,6,1,0,1,1,1,7,10]},
- {card:26,x:664.8,y:147.8,nx:614.8,ny:138.3,lat:39.700159,lon:68.111164,thumb:[505,119],photo:'1582',bat:91,lure:30,w:[1,3,5,1,1,0,0,1,6,8]},
- {card:21,x:523.9,y:287.5,nx:474.8,ny:277.9,lat:39.698640,lon:68.110678,photo:'1560',bat:88,lure:43,w:[1,2,4,2,1,1,1,2,4,4]},
- {card:27,x:910.3,y:147.8,nx:860.3,ny:138.3,lat:39.701223,lon:68.113395,photo:'1579',bat:74,lure:30,w:[1,2,3,2,1,1,2,2,3,4]},
- {card:18,x:685.3,y:433.2,nx:635.3,ny:423.7,lat:39.698392,lon:68.112971,photo:'1568',bat:86,lure:16,w:[0,1,3,1,2,5,1,2,3,3]},
- {card:22,x:646.9,y:292.5,nx:596.9,ny:283.0,lat:39.699141,lon:68.111823,photo:'1565',bat:93,lure:16,w:[0,1,2,2,1,1,2,1,3,3]},
- {card:17,x:531.0,y:421.4,nx:481.0,ny:411.9,lat:39.697800,lon:68.111503,photo:'1557',bat:79,lure:16,w:[1,2,5,1,0,1,1,2,3,3]},
- {card:23,x:826.0,y:292.5,nx:776.1,ny:283.0,lat:39.699916,lon:68.113450,photo:'1548',bat:69,lure:16,w:[0,1,1,0,0,1,1,1,2,1]},
- {card:19,x:833.9,y:439.3,nx:783.9,ny:429.8,lat:39.698996,lon:68.114356,photo:'1545',bat:90,lure:16,w:[0,1,2,1,0,3,1,2,2,1]},
- {card:14,x:670.9,y:576.1,nx:621.0,ny:566.6,lat:39.697400,lon:68.113652,photo:'1541',bat:85,lure:16,w:[0,0,3,0,0,1,1,1,2,1]},
- {card:20,x:1030.0,y:442.6,nx:980.0,ny:433.1,lat:39.699824,lon:68.116156,photo:'1534',bat:84,lure:16,w:[0,0,1,0,0,0,0,0,0,1]},
- {card:15,x:844.8,y:576.2,nx:800.6,ny:566.6,lat:39.698153,lon:68.115232,photo:'1538',bat:92,lure:16,w:[0,1,0,0,0,0,0,0,1,0]},
- {card:16,x:1089.8,y:579.8,nx:1039.8,ny:570.2,lat:39.699190,lon:68.117478,photo:'1531',bat:78,lure:16,w:[0,0,1,0,0,0,0,0,1,0]},
- {card:24,x:1018.6,y:311.9,nx:973.7,ny:302.4,lat:39.700625,lon:68.115310,photo:'1534',bat:87,lure:16,w:[0,1,1,0,0,0,1,0,1,1]},
- {card:28,x:1055.6,y:147.9,nx:1005.7,ny:138.3,lat:39.701852,lon:68.114715,photo:'1548',bat:83,lure:16,w:[1,1,2,1,0,1,1,1,2,2]}];
+ {card:25,x:495.0,y:157.0,nx:445.0,ny:157.0,lat:39.699551,lon:68.109999,photo:'1585',bat:82,lure:30,w:[1,3,6,1,0,1,1,1,7,10]},
+ {card:26,x:659.0,y:149.0,nx:609.0,ny:149.0,lat:39.700159,lon:68.111164,photo:'1582',bat:91,lure:30,w:[1,3,5,1,1,0,0,1,6,8]},
+ {card:21,x:493.0,y:285.0,nx:443.0,ny:285.0,lat:39.698640,lon:68.110678,photo:'1560',bat:88,lure:43,w:[1,2,4,2,1,1,1,2,4,4]},
+ {card:27,x:858.0,y:139.0,nx:808.0,ny:139.0,lat:39.701223,lon:68.113395,photo:'1579',bat:74,lure:30,w:[1,2,3,2,1,1,2,2,3,4]},
+ {card:18,x:670.0,y:444.0,nx:620.0,ny:444.0,lat:39.698392,lon:68.112971,photo:'1568',bat:86,lure:16,w:[0,1,3,1,2,5,1,2,3,3]},
+ {card:22,x:653.0,y:291.0,nx:603.0,ny:291.0,lat:39.699141,lon:68.111823,photo:'1565',bat:93,lure:16,w:[0,1,2,2,1,1,2,1,3,3]},
+ {card:17,x:526.0,y:422.0,nx:476.0,ny:422.0,lat:39.697800,lon:68.111503,photo:'1557',bat:79,lure:16,w:[1,2,5,1,0,1,1,2,3,3]},
+ {card:23,x:856.0,y:286.0,nx:806.0,ny:286.0,lat:39.699916,lon:68.113450,photo:'1548',bat:69,lure:16,w:[0,1,1,0,0,1,1,1,2,1]},
+ {card:19,x:848.0,y:430.0,nx:798.0,ny:430.0,lat:39.698996,lon:68.114356,photo:'1545',bat:90,lure:16,w:[0,1,2,1,0,3,1,2,2,1]},
+ {card:14,x:665.0,y:579.0,nx:615.0,ny:579.0,lat:39.697400,lon:68.113652,photo:'1541',bat:85,lure:16,w:[0,0,3,0,0,1,1,1,2,1]},
+ {card:20,x:1018.0,y:448.0,nx:968.0,ny:448.0,lat:39.699824,lon:68.116156,photo:'1534',bat:84,lure:16,w:[0,0,1,0,0,0,0,0,0,1]},
+ {card:15,x:820.0,y:579.0,nx:770.0,ny:579.0,lat:39.698153,lon:68.115232,photo:'1538',bat:92,lure:16,w:[0,1,0,0,0,0,0,0,1,0]},
+ {card:16,x:1090.0,y:595.0,nx:1040.0,ny:595.0,lat:39.699190,lon:68.117478,photo:'1531',bat:78,lure:16,w:[0,0,1,0,0,0,0,0,1,0]},
+ {card:24,x:969.0,y:324.0,nx:969.0,ny:284.0,lat:39.700625,lon:68.115310,photo:'1534',bat:87,lure:16,w:[0,1,1,0,0,0,1,0,1,1]},
+ {card:28,x:1041.0,y:149.0,nx:991.0,ny:149.0,lat:39.701852,lon:68.114715,photo:'1548',bat:83,lure:16,w:[1,1,2,1,0,1,1,1,2,2]}];
 TRAPS.forEach(t=>t.id='T-'+t.card);
 const TBY={};TRAPS.forEach(t=>TBY[t.id]=t);
 /* a trap whose lure has run out or whose battery is low: its count may be too low */
@@ -2713,10 +2710,6 @@ function buildMap(){
   el('text',{x:NUM_AT[c][0],y:NUM_AT[c][1]+6,class:'fm-cnum','pointer-events':'none'},g).textContent=c;
   const fx=NUM_AT[c][0]+(c>9?28:17),crop=cropOf(c);addIc(g,crop.ic,fx,NUM_AT[c][1]-8,16,'fm-cfruit-i');
   el('text',{x:fx+20,y:NUM_AT[c][1]+5,class:'fm-cfruit','pointer-events':'none'},g).textContent=crop.name;
-  if(t.thumb){const [tx,ty]=t.thumb,w=72,h2=54,cid='fmClip'+c;el('rect',{x:tx,y:ty,width:w,height:h2,rx:8},el('clipPath',{id:cid},g));
-   el('image',{x:tx,y:ty,width:w,height:h2,preserveAspectRatio:'xMidYMid slice','clip-path':`url(#${cid})`,href:PHOTOS[t.photo].src},g);
-   el('rect',{x:tx,y:ty,width:w,height:h2,rx:8,class:'fm-thumb'},g);
-   el('circle',{cx:tx+w-2,cy:ty+h2-2,r:10,class:'fm-thumb-b'},g);addIc(g,IC.cam,tx+w-9,ty+h2-9,14,'fm-thumb-i')}
   bindPick(g,t);R.cards[c]=g;
  });
  TRAPS.forEach(t=>{const k=levelOf(t),r=LEVEL[k];
